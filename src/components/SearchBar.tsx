@@ -1,24 +1,26 @@
-import { useState, ChangeEvent, MouseEvent } from 'react'
+import { useState, ChangeEvent, FormEvent } from "react";
 
 function SearchBar() {
-  const [inputVal, setInputVal] = useState('');
-  
+  const [inputVal, setInputVal] = useState("");
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputVal(e.target.value);
-  };
-
-  const clearSearch = () => {
-    setInputVal('');
   }
 
-  const getVal = (e: MouseEvent<HTMLButtonElement>) => {
+  const clearSearch = () => {
+    setInputVal("");
+  }
+
+  const getVal = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(inputVal);
+    if (inputVal.trim() !== '') {
+      console.log(inputVal);
+    }
   }
 
   return (
     <>
-      <form className="d-flex">
+      <form className="d-flex" onSubmit={getVal}>
         <input
           className="form-control me-2"
           type="search"
@@ -28,11 +30,7 @@ function SearchBar() {
           placeholder="Search"
           aria-label="Search"
         />
-        <button
-          className="btn btn-primary"
-          type="submit"
-          onClick={getVal}
-        >
+        <button className="btn btn-primary" type="submit">
           Search
         </button>
       </form>
