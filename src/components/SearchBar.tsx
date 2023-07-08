@@ -11,7 +11,7 @@ function SearchBar() {
     setInputVal("");
   }
 
-  const getVal = (e: FormEvent<HTMLFormElement>) => {
+  const getInputVal = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (inputVal.trim() !== '') {
       console.log(inputVal);
@@ -20,7 +20,7 @@ function SearchBar() {
 
   return (
     <>
-      <form className="d-flex" onSubmit={getVal}>
+      <form className="d-flex" onSubmit={getInputVal}>
         <input
           className="form-control me-2"
           type="search"
