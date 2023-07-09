@@ -1,0 +1,17 @@
+a.nav-link.active {
+    display: flex;
+    font-size: 45px;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    transition: border-radius 0.1s;
+}
+
+a.nav-link.active:hover {
+    background-color: lightgray;
+    border-radius: 40px;
+}
+
+nav {
+    margin-top: 15%;
+}
