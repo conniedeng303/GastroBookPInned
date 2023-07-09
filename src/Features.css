@@ -1,6 +1,6 @@
 a.nav-link.active {
     display: flex;
-    font-size: 45px;
+    font-size: 250%;
     align-items: center;
     cursor: pointer;
     color: black;

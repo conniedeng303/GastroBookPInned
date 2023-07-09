@@ -27,8 +27,8 @@ function Features() {
           <a className="nav-link active" onClick={test(logo.name)}>
             <img
               src={logo.image}
-              height="60"
-              width="60"
+              height="10%"
+              width="10%"
               className="d-inline-block align-middle"
               alt=""
             />
