@@ -16,6 +16,7 @@ function Features() {
     { image: CookbookLogo, name: "Cookbook" },
     { image: FavoriteLogo, name: "Favorites" },
   ];
+  
   const test = (logoName:string) => () => {
     console.log("Clicked on " + logoName);
   }
@@ -24,7 +25,7 @@ function Features() {
     <>
       <nav className="nav flex-column nav-fills ">
         {logos.map((logo) => (
-          <a className="nav-link active" onClick={test(logo.name)}>
+          <a className="nav-link active" key={logo.name} onClick={test(logo.name)}>
             <img
               src={logo.image}
               height="10%"
