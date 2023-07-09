@@ -1,24 +1,43 @@
-import DiscoverLogo from './assets/compass.svg'
+import HomeLogo from "../assets/home.svg";
+import DiscoverLogo from "../assets/compass.svg";
+import CookbookLogo from "../assets/cookbook.svg";
+import FavoriteLogo from "../assets/heart.svg";
+import "../Features.css";
+
+interface Logos {
+  image: string;
+  name: string;
+}
 
 function Features() {
-    const test = () => {
-        console.log("clicked");
-    }
+  const logos: Logos[] = [
+    { image: HomeLogo, name: "Home" },
+    { image: DiscoverLogo, name: "Discover" },
+    { image: CookbookLogo, name: "Cookbook" },
+    { image: FavoriteLogo, name: "Favorites" },
+  ];
+  const test = (logoName:string) => () => {
+    console.log("Clicked on " + logoName);
+  }
 
-    return (
-        <>
-            <div className ="mt-5 position-absolute top-30 start-30 centered height-100px w-10 p-3 mb-2 bg-warning text-dark rounded-3">
-                <h3 className = "text-center">Home<i className="bi-compass"></i></h3>
-            </div>
-            <div className ="mt-5 position-absolute top-50 start-3000 centered height-100px w-10 p-3 mb-2 bg-warning text-dark rounded-3">
-            </div>
-            <div onClick={test} style={{cursor:"pointer"}}>
-                <img src={DiscoverLogo} />
-            </div>
-
-        </>
-
-    )
+  return (
+    <>
+      <nav className="nav flex-column nav-fills ">
+        {logos.map((logo) => (
+          <a className="nav-link active" onClick={test(logo.name)}>
+            <img
+              src={logo.image}
+              height="60"
+              width="60"
+              className="d-inline-block align-middle"
+              alt=""
+            />
+            &emsp;{logo.name}
+          </a>
+        ))};
+      </nav>
+    </>
+  );
 }
 
 export default Features;
