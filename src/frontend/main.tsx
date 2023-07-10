@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 
-document.body.style.overflow = "hidden"
+document.body.style.overflowX = "hidden";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -14,30 +14,33 @@ function Features() {
     { image: HomeLogo, name: "Home" },
     { image: DiscoverLogo, name: "Discover" },
     { image: CookbookLogo, name: "Cookbook" },
-    { image: FavoriteLogo, name: "Favorites" },
+    { image: FavoriteLogo, name: "Favorites" }
   ];
-  
-  const test = (logoName:string) => () => {
+
+  const test = (logoName: string) => () => {
     console.log("Clicked on " + logoName);
-  }
+  };
 
   return (
-    <>
-      <nav className="nav flex-column nav-fills ">
-        {logos.map((logo) => (
-          <a className="nav-link active" key={logo.name} onClick={test(logo.name)}>
-            <img
-              src={logo.image}
-              height="10%"
-              width="10%"
-              className="d-inline-block align-middle"
-              alt=""
-            />
-            &emsp;{logo.name}
-          </a>
-        ))};
-      </nav>
-    </>
+    <nav className="nav flex-column nav-fills ">
+      {logos.map(({image, name}: Logos) => (
+        <a
+          className="nav-link active"
+          key={name}
+          onClick={test(name)}
+        >
+          <img
+            src={image}
+            height="10%"
+            width="10%"
+            className="d-inline-block align-middle"
+            alt=""
+          />
+          &emsp;{name}
+        </a>
+      ))}
+      ;
+    </nav>
   );
 }
 
