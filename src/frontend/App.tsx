@@ -1,21 +1,35 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import SideBar from './components/SideBar';
-import FoodCard from './components/FoodCard'
-// import { Row, Col } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.css";
+import SideBar from "./components/SideBar";
+import FoodCard from "./components/FoodCard";
 
+interface RecipeFromAPI {
+  name: string;
+}
 function App() {
+  const recipe: RecipeFromAPI[] = [
+    { name: "test1" }, 
+    { name: "test2" },
+    { name: "test3"},
+    { name: "test4"},
+    { name: "test5"}
+  ];
+
   return (
-    <div className = "row">
-    <div className = "col sm-5">
-      <SideBar />
+    <div className="container-{}">
+      <div className="row">
+        <div className="col-md-3">
+          <SideBar />
+        </div>
+        <div className="col-md p-0">
+          {recipe.map(({name} : RecipeFromAPI) => (
+            <div className="row" key={name}>
+              <FoodCard recipe={name} />
+          </div>
+          ))}
+        </div>
+      </div>
     </div>
-    <div className = "col sm-9">
-      <FoodCard />
-    </div>
-  </div>
   );
 }
 
-
-
-export default App
+export default App;
