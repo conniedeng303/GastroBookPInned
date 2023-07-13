@@ -1,8 +1,8 @@
-import HomeLogo from "../assets/home.svg";
-import DiscoverLogo from "../assets/compass.svg";
-import CookbookLogo from "../assets/cookbook.svg";
-import FavoriteLogo from "../assets/heart.svg";
-import "../Features.css";
+import HomeLogo from "../../assets/home.svg";
+import DiscoverLogo from "../../assets/compass.svg";
+import CookbookLogo from "../../assets/cookbook.svg";
+import FavoriteLogo from "../../assets/heart.svg";
+import "./Features.css";
 
 interface Logos {
   image: string;

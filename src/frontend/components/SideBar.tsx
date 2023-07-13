@@ -1,4 +1,4 @@
-import Features from "./Features";
+import Features from "./FeaturesComponent/Features";
 import SearchBar from "./SearchBar";
 
 function SideBar() {
