@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import SideBar from "./components/SideBar";
-import FoodCard from "./components/FoodCard";
+import FoodCard from "./components/FoodCardComponent/FoodCard";
 
 interface RecipeFromAPI {
   name: string;

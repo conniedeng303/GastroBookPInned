@@ -1,4 +1,4 @@
-import "../FoodCard.css";
+import "./FoodCard.css";
 
 interface Recipe {
   recipe: string;
@@ -12,7 +12,7 @@ function FoodCard({ recipe }: Recipe) {
   // ]
 
   return (
-    <div className="card d-flex justify-content-center m-2" style={{ width: "97%", height: "700px"}}>
+    <div className="card d-flex justify-content-center m-2" style={{ width: "97%", height: "400px"}}>
       <div className="card_body">
         <img
           className="img, img-top"
