@@ -39,7 +39,6 @@ function Features() {
           &emsp;{name}
         </a>
       ))}
-      ;
     </nav>
   );
 }

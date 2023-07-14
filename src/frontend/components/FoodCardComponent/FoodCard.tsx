@@ -12,7 +12,7 @@ function FoodCard({ recipe }: Recipe) {
   // ]
 
   return (
-    <div className="card d-flex justify-content-center m-2" style={{ width: "95%", height: "300px"}}>
+    <div className="card d-flex justify-content-center m-2" style={{ width: "74vw", height: "30vh"}}>
       <div className="card_body">
         <img
           className="img, img-top"

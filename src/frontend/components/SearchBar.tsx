@@ -19,7 +19,7 @@ function SearchBar() {
   };
 
   return (
-    <form className="d-flex" onSubmit={getInputVal}>
+    <form className="d-flex" onSubmit={getInputVal} style={{width:'43vh'}}>
       <input
         className="form-control me-2"
         type="search"
