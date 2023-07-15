@@ -8,6 +8,8 @@ const port = process.env.SERVER_PORT || 3000;
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", ( req, res ) => {
     res.render( "index" );
 });
